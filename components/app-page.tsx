@@ -331,7 +331,7 @@ export function PortfolioPage() {
         </section>
 
         <footer className="text-center text-gray-500">
-          <p>© {new Date().getFullYear()} John Doe. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Walid Maouche. All rights reserved.</p>
         </footer>
       </div>
     </div>
