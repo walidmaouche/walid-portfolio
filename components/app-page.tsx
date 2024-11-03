@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Code, Smartphone, Server, Database, Globe, Briefcase, GraduationCap, Award, ExternalLink, Cloud } from 'lucide-react'
+import { Github, Linkedin, Mail, Code, Smartphone, Server, Database, Globe, Briefcase, GraduationCap, ExternalLink } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from 'next/image'
@@ -197,7 +197,8 @@ const ProjectGrid = () => {
   )
 }
 
-const CareerJourneyItem = ({ item, index }: { item: any, index: number }) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const CareerJourneyItem = ({ item, index }: { item: { year: number, title: string, description: string, icon: any }, index: number }) => {
   return (
     <motion.div 
       className="flex items-center mb-8"
@@ -274,7 +275,7 @@ export function PortfolioPage() {
               <CardContent className="p-6">
                 <h2 className="text-2xl text-white font-bold mb-4">About Me</h2>
                 <p className="text-gray-300 mb-4">
-                  I'm a passionate full-stack developer with expertise in both front-end and back-end technologies. 
+                  I&apos;m a passionate full-stack developer with expertise in both front-end and back-end technologies. 
                   With a strong foundation in web and mobile development, I specialize in creating seamless, 
                   end-to-end solutions that deliver exceptional user experiences.
                 </p>
@@ -289,8 +290,8 @@ export function PortfolioPage() {
                   <li>DevOps: Docker, CI/CD pipelines</li>
                 </ul>
                 <p className="text-gray-300">
-                  I'm always eager to take on new challenges and continuously expand my skill set in this ever-evolving 
-                  field of technology. Let's build something amazing together!
+                  I&apos;m always eager to take on new challenges and continuously expand my skill set in this ever-evolving 
+                  field of technology. Let&apos;s build something amazing together!
                 </p>
               </CardContent>
             </Card>
@@ -312,7 +313,7 @@ export function PortfolioPage() {
         </section>
 
         <section className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-8">Let's Connect</h2>
+          <h2 className="text-3xl font-bold mb-8">Let&apos;s Connect</h2>
           <div className="flex justify-center space-x-4">
             <Button onClick={() => window.open('https://github.com/walidmaouche', '_blank')} variant="outline" size="icon" className="bg-transparent border-white hover:bg-white hover:text-gray-900">
               <Github className="h-5 w-5" />
